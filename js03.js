@@ -34,6 +34,12 @@ function showGames() {
     let gameInfo = "";
 
     gameInfo += "<p>";
+    
+    if (gameLocations[i] === "h") {
+      gameInfo += "vs. ";
+     } else if (gameLocations[i] === "a") {
+        gameInfo += "at ";
+    }
 
     gameInfo += gameOpponents[i] + "<br>";
 
