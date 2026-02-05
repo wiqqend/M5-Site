@@ -28,3 +28,20 @@ function addWeekDays() {
   }
 }
 
+window.addEventListener("load", showGames);
+function showGames() {  
+  for (let i = 0; i < gameDates.length; i++) {
+    let gameInfo = "";
+
+    gameInfo += "<p>";
+
+    gameInfo += gameOpponents[i] + "<br>";
+
+    gameInfo += gameResults[i] + ": (" + runsScored[i] + " - " + runsAllowed[i] + ")";
+
+    gameInfo += "</p>";
+
+    let tableCell = document.getElementById(gameDates[i]);
+    tableCell.insertAdjacentHTML("beforeend", gameInfo);
+  }
+}
