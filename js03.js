@@ -45,6 +45,15 @@ function showGames() {
 
     gameInfo += gameResults[i] + ": (" + runsScored[i] + " - " + runsAllowed[i] + ")";
 
+
+    if (gameInnings[i] < 5) {
+      gameInfo += " [" + gameInnings[i] +"]***";
+    } else if (gameInnings[i] < 9) {
+      gameInfo += " [" + gameInnings[i] +"]*";
+    } else if (gameInnings[i] > 9) {
+      gameInfo += " [" + gameInnings[i] +"]";
+    }
+
     gameInfo += "</p>";
 
     let tableCell = document.getElementById(gameDates[i]);
