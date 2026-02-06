@@ -50,7 +50,7 @@ function showGames() {
     if (gameLocations[i] === "h") {
       gameInfo += "vs. ";
      } else if (gameLocations[i] === "a") {
-        gameInfo += "at ";
+        gameInfo += "@ ";
     }
 
     gameInfo += gameOpponents[i] + "<br>";
