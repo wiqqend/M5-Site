@@ -31,6 +31,7 @@ function addWeekDays() {
 window.addEventListener("load", showGames);
 function showGames() {  
   for (let i = 0; i < gameDates.length; i++) {
+    let gameInfo = "";
     switch (gameResults[i]) {
       case "W":
         gameInfo += "<p class='win'>";
